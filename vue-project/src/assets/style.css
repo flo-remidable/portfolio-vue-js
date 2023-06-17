@@ -1,0 +1,119 @@
+body{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* header et menu */
+
+header{
+    background-image: url(./vue-project/img/banniere.jpg);
+    background-size: cover;
+    height: 500px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 150px;
+    font-size: 3rem;
+    color: white;
+}
+
+#menu a{
+    color: white;
+    font-size: 2rem;
+}
+
+#menu{
+    background-color: rgb(20, 102, 156);
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#menu a:hover {
+    background-color: hsla(180, 84%, 54%, 0.2);
+  }
+
+/* présentation */
+
+.presentation-content{
+    font-size: 1.5rem;
+}
+
+
+#presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+h2{
+    font-size: 3rem;
+}
+
+/* création */
+
+.creation-titre{
+    display: flex;
+    justify-content: center;
+}
+
+#creation h3{
+    display: flex;
+    justify-content: center;
+}
+
+#creation img{
+    height: 400px;
+}
+
+#creation img:hover{
+    box-shadow: 20px 20px 15px  black;
+    
+}
+
+.creation-content{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* formulaire */
+
+#message{
+    width: 400px;
+}
+
+#nom-prenom{
+    display: flex;
+    flex-direction: row;
+} 
+
+#form-content{
+    margin-left: 20px;
+    width: 400px; 
+    font-size: 1.5rem;
+}
+
+ #boutton{
+    width: 100px;
+}
+
+#prénom, #nom{
+    width: 195px;
+    height: 1.6rem;
+}
+
+
+#contact{
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+}
+
+

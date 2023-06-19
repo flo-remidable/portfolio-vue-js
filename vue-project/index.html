@@ -8,80 +8,104 @@
     <title>Vite App</title>
   </head>
   <body>
-    <header>
-      <nav id="menu">
-        <a href="#">Accueil</a> 
-        <a href="#presentation">Présentation</a> 
-        <a href="#creation">Création</a> 
-        <a href="#contact">Contact</a>  
-      </nav>
-      <h1>Mon portfolio</h1>       
-    </header>
+    <div id="app">
+      <header>
+        <nav id="menu">
+          <a href="#">Accueil</a> 
+          <a href="#presentation">Présentation</a> 
+          <a href="#creation">Création</a> 
+          <a href="#contact">Contact</a>  
+        </nav>
+        <h1>Mon portfolio</h1>       
+      </header>
 
-    <main>
-      <!-- Présentation -->
-      <section id="presentation">
-        <h2 class="presentation-titre">Présentation</h2>
-        <div class="presentation-content">
-          Bonjour a toutes et à tous, pour commencer je m'apelle Florian et j'ai 27ans. <br>
-          Je suis actuellement en formation en tant que développeur <br>
-          full stack grace au Centre Europeen de Formation.<br>
-          J'ai creer ce site pour vous présenter mes réalisation effectuer <br>
-          durant ma formation et ainsi vous montrer mon savoir faire acquis jusqu'a présent.<br>
-        </div>
-      </section>
-
-      <!-- Création -->
-      <section id="creation">
-        <h2 class="creation-titre">Voici mes création</h2>
-        <div class="creation-content">
-          <div id="contenu-cv">
-            <h3>Mon CV en ligne</h3>
-            <a href="./img/CV.en.ligne.png" target="_blank">
-                <img src="./img/CV.en.ligne.png" alt="Le cv en ligne que j'ai créer" id="img-cv">
-            </a>
+      <main>
+        <!-- Présentation -->
+        <section id="presentation">
+          <h2 class="presentation-titre">Présentation</h2>
+          <div class="presentation-content">
+            Bonjour a toutes et à tous, pour commencer je m'apelle Florian et j'ai 27ans. <br>
+            Je suis actuellement en formation en tant que développeur <br>
+            full stack grace au Centre Europeen de Formation.<br>
+            J'ai creer ce site pour vous présenter mes réalisation effectuer <br>
+            durant ma formation et ainsi vous montrer mon savoir faire acquis jusqu'a présent.<br>
           </div>
+        </section>
 
-          <div id="contenu-espace-commentaire">
-            <h3>Espace commentaire dynamiser</h3>
-            <a href="./img/Espace.commentaire.png" target="_blank">
-                <img src="./img/Espace.commentaire.png" alt="l'espace commentaire que j'ai dynamiser grace a JS" id="img-commentaire">
-            </a>
-          </div>
-
-          <div id="contenue-paysagiste">
-            <h3>site de paysagiste(en cour)</h3>
-            <a href="./img/paysagiste.png" target="_blank">
-              <img src="./img/paysagiste.png" alt="le site de paysagiste que je fais" id="img-paysagiste">
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact">
-        <h2 class="contact-titre">Pour me contacter</h2>
-        <div id="form-content">
-          <form action="#" method="post" id="form">
-            <div id="nom-prenom">
-              <div id="first-name">
-                <label for="prénom">Prénom</label>            
-                <input type="text" id="prénom" name="form" placeholder="Prénom (nécessaire)">
-              </div>
-              <div id="last-name">      
-                <label for="nom">Nom</label>
-                <input type="text" id="nom" name="form" placeholder="Nom (nécessaire)">
-              </div>
+        <!-- Création -->
+        <section id="creation">
+          <h2 class="creation-titre">Voici mes création</h2>
+          <div class="creation-content">
+            <div id="contenu-cv">
+              <h3>Mon CV en ligne</h3>
+              <img src="./img/CV.en.ligne.png" alt="Le cv en ligne que j'ai créer le 25 mai 2023, cliquez sur la photo pour mes différents repository GitHub." class="img-cv">
             </div>
-            <label for="message">Message</label>
-            <textarea name="form" id="message" cols="35" rows="10" placeholder="Votre message..."></textarea>
-            <input type="submit" id="boutton">          
-          </form>
-        </div>
-      </section>
-    </main>
 
-    <footer></footer>
-    <script type="module" src="./src/router/index.js"></script>
-  </body>
-</html>
+            <div id="contenu-espace-commentaire">
+              <h3>Espace commentaire dynamiser</h3>
+              <img src="./img/Espace.commentaire.png" alt="l'espace commentaire que j'ai dynamiser grace a JS créer le 15 juin 2023, cliquez sur la photo pour mes différents repository GitHub." class="img-commentaire">
+            </div>
+
+            <div id="contenue-paysagiste">
+              <h3>site de paysagiste(en cour)</h3>
+                <img src="./img/paysagiste.png" alt="le site de paysagiste que je fais (pas terminé) créer le 24 mai 2023, cliquez sur la photo pour mes différents repository GitHub." class="img-paysagiste">
+            </div>
+          </div> 
+        </section>
+
+        <!-- Modal -->
+
+        <div id="modal" class="modal">>
+          <span class="close">&times;</span>
+          <a href="https://github.com/flo-remidable" target="_blank"><img class="modal-content" id="img01" src=""></a>
+          <div id="caption"></div>       
+        </div>
+
+        <!-- Contact -->
+        <section id="contact">
+          <h2 class="contact-titre">Pour me contacter</h2>
+          <div id="error-message">
+            Tous les champs doivent être remplis !!
+          </div>
+          <div id="form-content">
+            <form action="#" method="post" id="form">
+              <div id="nom-prenom">
+                <div id="first-name">
+                  <label for="prénom">Prénom</label>            
+                  <input type="text" id="prénom" name="form" placeholder="Prénom (nécessaire)">
+                </div>
+                <div id="last-name">      
+                  <label for="nom">Nom</label>
+                  <input type="text" id="nom" name="form" placeholder="Nom (nécessaire)">
+                </div>
+              </div>
+              <label for="message">Message</label>
+              <textarea name="form" id="message" cols="35" rows="10" placeholder="Votre message..."></textarea>
+              <input type="submit" id="boutton">          
+            </form>
+          </div>             
+        </section>
+      </main>
+
+      <footer>
+        <div id="text-footer">
+          <small>@copyright 2023</small>
+          <p>dernière mise a jout le xx/xx/xxxx</p>
+        </div>
+        <a href="**" target="_blank">
+          <img src="./img/logofb.jpg" alt="Logo Facebook" id="face">
+        </a>
+
+        <a href="" target="_blank">
+          <img src="./img/logo.twitter.webp" alt="Logo Twitter" id="twitter">
+        </a>
+
+        <a href="https://github.com/flo-remidable" target="_blank">
+          <img src="./img/github.png" alt="Logo github" id="github">
+        </a>
+      </footer>
+    </div>
+    <script src="./src/assets/app.js"></script>
+    
+  </body>  
+</html>     
